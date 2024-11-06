@@ -1,12 +1,20 @@
-import Header from "./component/header";
-import Main from "./component/mainn";
-import Footer from "./component/footer";
+//import Header from "./component/header";
+//import Main from "./component/mainn";
+//import Footer from "./component/footer";
+//import Article from "./component/article";
+//import WelcomeMessage from "./component/WelcomeMessage";
+//import JSxrules from "./component/JSxrules";
+import Greetings from "./component/greetings";
 const App = () =>{
   return(
   <div>
-    <Header/>
+    {/*<Header/>
     <Main/>
+    <Article/>
     <Footer/>
+    <WelcomeMessage/>
+    <JSxrules/>*/}
+    <Greetings/>
   </div>
   );
 };
