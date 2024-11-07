@@ -4,7 +4,8 @@
 //import Article from "./component/article";
 //import WelcomeMessage from "./component/WelcomeMessage";
 //import JSxrules from "./component/JSxrules";
-import Greetings from "./component/greetings";
+//import Greetings from "./component/greetings";
+import ProductInfo from "./component/productInfo";
 const App = () =>{
   return(
   <div>
@@ -13,8 +14,9 @@ const App = () =>{
     <Article/>
     <Footer/>
     <WelcomeMessage/>
-    <JSxrules/>*/}
-    <Greetings/>
+    <JSxrules/>
+    <Greetings/>*/}
+    <ProductInfo/>
   </div>
   );
 };
