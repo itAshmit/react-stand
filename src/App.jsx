@@ -5,20 +5,24 @@
 //import WelcomeMessage from "./component/WelcomeMessage";
 //import JSxrules from "./component/JSxrules";
 //import Greetings from "./component/greetings";
+import Userlist from "./component/userlist";
 import ProductInfo from "./component/productInfo";
-const App = () =>{
-  return(
-  <div>
-    {/*<Header/>
-    <Main/>
-    <Article/>
-    <Footer/>
-    <WelcomeMessage/>
-    <JSxrules/>
-    <Greetings/>*/}
-    <ProductInfo/>
-  </div>
+import ProductList from "./ProductList";
+function App() {
+  return (
+    <div>
+      {/*<Header/>
+            <Main/>
+            <Article/>
+            <Footer/>
+            <WelcomeMessage/>
+            <JSxrules/>
+            <Greetings/>*/}
+      <ProductInfo />
+      <Userlist />
+      <ProductList/>
+    </div>
   );
-};
+}
 
 export default App;
