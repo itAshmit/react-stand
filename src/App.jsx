@@ -5,9 +5,13 @@
 //import WelcomeMessage from "./component/WelcomeMessage";
 //import JSxrules from "./component/JSxrules";
 //import Greetings from "./component/greetings";
-import Userlist from "./component/userlist";
-import ProductInfo from "./component/productInfo";
-import ProductList from "./ProductList";
+//import Userlist from "./component/userlist";
+//import ProductInfo from "./component/productInfo";
+//import ProductList from "./ProductList";
+//import Apps from "./component/Apps";
+//import Product from "./component/Product";
+import Weather from "./component/weather";
+import UserStatus from "./component/UserStatus";
 function App() {
   return (
     <div>
@@ -17,10 +21,14 @@ function App() {
             <Footer/>
             <WelcomeMessage/>
             <JSxrules/>
-            <Greetings/>*/}
+            <Greetings/>
       <ProductInfo />
       <Userlist />
       <ProductList/>
+      <Apps/>
+      <Product/> */}
+      <Weather/>
+      <UserStatus loggedIn={true} isAdmin={false}/>
     </div>
   );
 }
