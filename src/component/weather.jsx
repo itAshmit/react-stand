@@ -1,5 +1,5 @@
 const Weather = () => {
-  let temp=27   ;
+  let temp=7   ;
   if(temp<15){
     return <h1>It's Cold outside</h1>
   } else if(temp>15 && temp<25){

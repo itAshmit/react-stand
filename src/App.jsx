@@ -10,8 +10,12 @@
 //import ProductList from "./ProductList";
 //import Apps from "./component/Apps";
 //import Product from "./component/Product";
-import Weather from "./component/weather";
-import UserStatus from "./component/UserStatus";
+//import Weather from "./component/weather";
+//import UserStatus from "./component/UserStatus";
+//import Greeting from "./component/Greeting";
+import Component from "./component/component";
+import ProfileCard from "./component/ProfileCard";
+import StyledCard from "./component/StyledCard";
 function App() {
   return (
     <div>
@@ -26,9 +30,13 @@ function App() {
       <Userlist />
       <ProductList/>
       <Apps/>
-      <Product/> */}
+      <Product/> 
       <Weather/>
       <UserStatus loggedIn={true} isAdmin={false}/>
+      <Greeting timeOfDay="Morning"/>*/}
+      <StyledCard/>
+      <ProfileCard/>
+      <Component/>
     </div>
   );
 }
