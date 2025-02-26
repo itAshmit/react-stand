@@ -13,13 +13,13 @@
 //import Weather from "./component/weather";
 //import UserStatus from "./component/UserStatus";
 //import Greeting from "./component/Greeting";
-import Component from "./component/component";
+{/*import Component from "./component/component";
 import ProfileCard from "./component/ProfileCard";
 import StyledCard from "./component/StyledCard";
 function App() {
   return (
     <div>
-      {/*<Header/>
+      <Header/>
             <Main/>
             <Article/>
             <Footer/>
@@ -33,12 +33,24 @@ function App() {
       <Product/> 
       <Weather/>
       <UserStatus loggedIn={true} isAdmin={false}/>
-      <Greeting timeOfDay="Morning"/>*/}
+      <Greeting timeOfDay="Morning"/>
       <StyledCard/>
       <ProfileCard/>
       <Component/>
     </div>
   );
+}
+
+export default App;*/}                                  
+//ABOVE CODE IS FROM OTHER YOUTUBE CHANNEL I.E, HUXNWEBDEV
+import React from 'react'
+
+function App() {
+  return (
+    <div> 
+    <h1 style={{backgroundColor:"lightblue", padding:"10px"}}>hello from React</h1>
+    </div>
+  )
 }
 
 export default App;
