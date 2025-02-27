@@ -44,10 +44,11 @@ function App() {
 export default App;*/}                                  
 //ABOVE CODE IS FROM OTHER YOUTUBE CHANNEL I.E, HUXNWEBDEV
 import React from 'react'
+import Header1 from './Header1';
 function App() {
   return (
     <div> 
-    <h1 className='heading'>Hello from React</h1>
+      <Header1/>
     </div>
   )
 }
