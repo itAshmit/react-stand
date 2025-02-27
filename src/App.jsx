@@ -44,11 +44,10 @@ function App() {
 export default App;*/}                                  
 //ABOVE CODE IS FROM OTHER YOUTUBE CHANNEL I.E, HUXNWEBDEV
 import React from 'react'
-
 function App() {
   return (
     <div> 
-    <h1 style={{backgroundColor:"lightblue", padding:"10px"}}>hello from React</h1>
+    <h1 className='heading'>Hello from React</h1>
     </div>
   )
 }
