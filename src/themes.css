@@ -1,24 +1,20 @@
- body {
-    background-color: white;
+body{
+    background-color: rgb(99, 11, 77);
     color: rgb(41, 114, 90);
     padding: 0px;
     margin: 0px;
 }
 
-.light .heading {
-    font-size: 90px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
-.light .header {
-    background-color: rgb(19, 199, 175);
+.dark .header {
+    background-color: rgb(90, 10, 127);
     padding: 10px 5px;
     text-align: end;
     align-items: center;
     position: relative; /* To position the menu properly */
 }
 
-.light .mButton,.light .button2 {
+.dark .mButton,.dark .button2 {
     color: black;
     border: 1px solid black;
     border-radius: 5px;
@@ -29,7 +25,7 @@
     transition: background-color 0.5s ease-in-out;
 }
 
-.light .mButton:hover {
+.dark .mButton:hover {
     animation: colorChange 1s forwards;
     color: white;
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -41,7 +37,7 @@
 }
 
 /* Style for the menu box */
-.light .menu-box {
+.dark .menu-box {
     position: absolute;
     right: 10px;
     top: 48px; /* Adjust based on header size */
@@ -54,7 +50,7 @@
     gap: 5px;
 }
 
-.light .menu-box button {
+.dark .menu-box button {
     background-color: #18ed3f;
     color: black;
     border: 1px solid white;
@@ -64,11 +60,11 @@
     transition: background-color 0.7s;
 }
 
-.light .lightTheme:hover{
+.dark .darkTheme:hover{
     background-color: white;
     color: black;
 }
-.light .DarkTheme:hover{
+.dark .DarkTheme:hover{
     background-color: black;
     color: white;
 } 
