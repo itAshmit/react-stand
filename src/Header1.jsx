@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import ThemeSwitcher from "./ThemeSwitcher"; // Import ThemeSwitcher
-import "./themes.css"; // Import themes.css file
+import React, { useState, useEffect, useRef } from "react";
+import ThemeSwitcher from "./ThemeSwitcher";
+import "./themes.css";
 
 function Header1() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+    const menuRef = useRef(null); // Ref to detect outside clicks
 
     // Function to toggle menu visibility
     const toggleMenu = () => {
@@ -19,17 +20,40 @@ function Header1() {
         setIsMenuOpen(false); // Close menu after selection
     };
 
+    // Close menu when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false);
+            }
+        }
+
+        if (isMenuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
     // Load theme on page load
     useEffect(() => {
-        document.body.className = theme; // Apply theme when component loads
+        document.body.className = theme;
     }, [theme]);
 
     return (
-        <div className={`header ${theme}`}>
-            <button className="mButton" onClick={toggleMenu}>Menu</button>
-
-            {/* Menu box */}
-            {isMenuOpen && <ThemeSwitcher changeTheme={changeTheme} />}
+        <div className={`Main ${theme}`}>
+            <div className="header">
+                <button className="mButton" onClick={toggleMenu}>Theme</button>
+                {isMenuOpen && (
+                    <div ref={menuRef}>
+                        <ThemeSwitcher changeTheme={changeTheme} />
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

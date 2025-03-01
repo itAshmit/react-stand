@@ -1,13 +1,10 @@
  body {
-    background-color: white;
-    color: rgb(41, 114, 90);
     padding: 0px;
     margin: 0px;
 }
 
-.light .heading {
-    font-size: 90px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.light .Main{
+    background-color: rgb(73, 169, 152);
 }
 
 .light .header {
