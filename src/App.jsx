@@ -43,14 +43,16 @@ function App() {
 
 export default App;*/}                                  
 //ABOVE CODE IS FROM OTHER YOUTUBE CHANNEL I.E, HUXNWEBDEV
-import React from 'react'
-import Header1 from './Header1';
+// App.jsx (Main Component)
+import React from "react";
+import MusicPlayer from "./component/musicplayerproject/MusicPlayer.jsx";
+
 function App() {
   return (
-    <div> 
-      <Header1/>
+    <div className="App">
+      <MusicPlayer />
     </div>
-  )
+  );
 }
 
 export default App;

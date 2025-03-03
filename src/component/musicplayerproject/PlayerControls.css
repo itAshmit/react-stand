@@ -1,0 +1,31 @@
+/* PlayerControls.css */
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .player-controls button {
+    background-color: #282c34;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .player-controls button:hover {
+    background-color: #444;
+  }
+  
+  .player-controls button svg {
+    font-size: 18px;
+  }
+  

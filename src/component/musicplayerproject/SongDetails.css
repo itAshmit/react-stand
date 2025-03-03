@@ -1,0 +1,16 @@
+.song-details {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .song-details h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #ffcc00;
+  }
+  
+  .song-details p {
+    font-size: 14px;
+    color: #ddd;
+  }
+  
