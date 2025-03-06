@@ -4,7 +4,7 @@ import "./Navbar.css"
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>React Music Player</h1>
+      <h1>Sangeet</h1>
     </nav>
   );
 };

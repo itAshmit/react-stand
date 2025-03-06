@@ -15,6 +15,8 @@ body {
     padding: 20px;
     border-radius: 12px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease-in-out;
   }
@@ -49,8 +51,9 @@ body {
   .light-theme .navbar {
     background: #fff;
     color: #222;
-    padding: 10px 20px;
+    padding: 15px 0px;
     border-radius: 8px;
+    align-items: center;
   }
   
   .light-theme .song-details h2 {
