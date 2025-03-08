@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaVolumeUp } from "react-icons/fa"; // Volume icon
 import "./VolumeControl.css";
 
 const VolumeControl = ({ audioRef }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const changeVolume = (e) => {
-    audioRef.current.volume = e.target.value / 100;
+    if (audioRef.current) {
+      audioRef.current.volume = e.target.value / 100;
+    }
   };
 
   return (
-    <input
-      type="range"
-      min="0"
-      max="100"
-      onChange={changeVolume}
-      className="volume-control"
-    />
+    <div
+      className="volume-container"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      <FaVolumeUp className="volume-icon" />
+      <input
+        type="range"
+        min="0"
+        max="100"
+        onChange={changeVolume}
+        className={`volume-control ${isVisible ? "visible" : "hidden"}`}
+      />
+    </div>
   );
 };
 

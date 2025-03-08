@@ -11,7 +11,9 @@ body {
   
   /* 🎵 Main Music Player Container */
   .music-player {
-    width: 400px;
+    width: 400px;  /* Ensure fixed width */
+    min-width: 400px; /* Prevents shrinking */
+    min-height: 300px;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -121,7 +123,6 @@ body {
     cursor: pointer;
   }
   
-  /* 🌙 Dark Theme */
   .dark-theme {
     background: #121212;
     color: white;

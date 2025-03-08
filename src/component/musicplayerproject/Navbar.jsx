@@ -4,7 +4,7 @@ import "./Navbar.css"
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>Sangeet</h1>
+      <h1>संGeet</h1>
     </nav>
   );
 };

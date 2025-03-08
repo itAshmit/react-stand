@@ -10,9 +10,9 @@ import "./MusicPlayer.css";
 
 const MusicPlayer = () => {
   const [songs] = useState([
-    { id: 1, title: "Song One", artist: "Artist A", src: "/songs/song1.mp3" },
-    { id: 2, title: "Song Two", artist: "Artist B", src: "/songs/song2.mp3" },
-    { id: 3, title: "Song Three", artist: "Artist C", src: "/songs/song3.mp3" },
+    { id: 1, title: "Chanakya", artist: "Rishabh Rikhiram", src: "CHanakya_BY_RIkhiram.mp3" },
+    { id: 2, title: "Meri Bigdi Banana", artist: "Nikhil Verma", src: "Meri Bigdi Banaana.mp3" },
+    { id: 3, title: "Shiv Kailash", artist: "Rishabh Rikhiram", src: "Shiv_Kailash.mp3" },
   ]);
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -44,16 +44,18 @@ const MusicPlayer = () => {
     <div className="music-player">
       <Navbar />
       <SongDetails song={songs[currentSongIndex]} />
-      <audio ref={audioRef} src={songs[currentSongIndex].src} />
+      <audio ref={audioRef} src={songs[currentSongIndex]?.src || ""} />
       <ProgressBar audioRef={audioRef} />
       <PlayerControls
+        songs={songs} // ✅ Ensure `songs` is passed
+        currentSongIndex={currentSongIndex}
+        setCurrentSongIndex={setCurrentSongIndex}
         isPlaying={isPlaying}
-        togglePlayPause={togglePlayPause}
+        setIsPlaying={setIsPlaying}
         playNext={playNext}
         playPrevious={playPrevious}
       />
       <VolumeControl audioRef={audioRef} />
-      <Playlist songs={songs} setCurrentSongIndex={setCurrentSongIndex} />
       <ThemeToggle />
     </div>
   );

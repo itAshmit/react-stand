@@ -6,15 +6,41 @@ const ProgressBar = ({ audioRef }) => {
 
   useEffect(() => {
     const updateProgress = () => {
-      if (audioRef.current) {
+      if (audioRef.current && !isNaN(audioRef.current.duration)) {
         setProgress((audioRef.current.currentTime / audioRef.current.duration) * 100);
       }
     };
-    audioRef.current?.addEventListener("timeupdate", updateProgress);
-    return () => audioRef.current?.removeEventListener("timeupdate", updateProgress);
+
+    const audio = audioRef.current;
+    if (audio) {
+      audio.addEventListener("timeupdate", updateProgress);
+      return () => {
+        audio.removeEventListener("timeupdate", updateProgress);
+      };
+    }
   }, [audioRef]);
 
-  return <input type="range" value={progress} readOnly className="progress-bar" />;
+  const handleSeek = (event) => {
+    if (!audioRef.current || isNaN(audioRef.current.duration)) return; // Prevent errors
+
+    const seekTime = (event.target.value / 100) * audioRef.current.duration;
+    if (!isNaN(seekTime) && seekTime >= 0 && seekTime <= audioRef.current.duration) {
+      audioRef.current.currentTime = seekTime;
+      setProgress(event.target.value);
+    }
+  };
+
+  return (
+    <input
+      type="range"
+      value={progress}
+      onChange={handleSeek}
+      className="progress-bar"
+      style={{
+        background: `linear-gradient(to right, #4caf50 ${progress}%, #ddd ${progress}%)`,
+      }}
+    />
+  );
 };
 
 export default ProgressBar;
